@@ -1,0 +1,9 @@
+.App {
+  min-height: 64rem;
+  width: calc(100vw - 9rem);
+  margin: 4.5rem auto;
+  border: 1.5px solid rgba(199, 194, 194, 0.5);
+
+  display: grid;
+  grid-template-columns: 40% 60%;
+}
