@@ -39,7 +39,22 @@ export default class Gallery extends Component {
           </div>
         );
       }
-      return <div key={imgNumber}>{imgNumber}</div>;
+      return (
+        <div
+          key={imgNumber}
+          onClick={() => {
+            if (i === this.props.images.length - 1) {
+              this.setState({ imgIndex: i, next: false, prev: true });
+            } else if (i === 0) {
+              this.setState({ imgIndex: i, next: true, prev: false });
+            } else {
+              this.setState({ imgIndex: i, next: true, prev: true });
+            }
+          }}
+        >
+          {imgNumber}
+        </div>
+      );
     });
     const { imgLink } = this.props.images[this.state.imgIndex];
     return (
