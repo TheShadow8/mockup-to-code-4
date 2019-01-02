@@ -1,13 +1,30 @@
+$bp-medium: 50em; //800px
+$bp-small: 37.5em; //600px
+
 .gallery {
   width: 90%;
   height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
+
+  @media only screen and (max-width: $bp-medium) {
+    margin-top: 4rem;
+    width: 100%;
+    justify-content: center;
+  }
 }
 .imgBox {
   height: 46.5rem;
   max-width: 100%;
+  @media only screen and (max-width: $bp-medium) {
+    max-height: 70%;
+    max-width: 70rem;
+  }
+
+  // @media only screen and (max-width: $bp-small) {
+  //   -width: 70rem;
+  // }
 
   img {
     height: 100%;
@@ -44,8 +61,21 @@
     font-size: 1.5rem;
     display: flex;
     justify-content: space-around;
+    align-items: flex-start;
+
+    @media only screen and (max-width: $bp-medium) {
+      margin-right: 2.3rem;
+      font-size: 3rem;
+    }
+
     &:hover {
       cursor: pointer;
+    }
+
+    &--prev {
+      @media only screen and (max-width: $bp-medium) {
+        margin-right: 1.5rem;
+      }
     }
 
     &--next:hover {

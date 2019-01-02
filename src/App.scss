@@ -1,3 +1,7 @@
+$bp-largest: 75em; //1200px
+$bp-large: 62.5em; //1000px
+$bp-medium: 50em; //800px
+
 .App {
   min-height: 64rem;
   width: calc(100vw - 9rem);
@@ -6,4 +10,20 @@
 
   display: grid;
   grid-template-columns: 40% 60%;
+
+  @media only screen and (max-width: $bp-largest) {
+    border: none;
+  }
+  @media only screen and (max-width: $bp-large) {
+    width: 100vw;
+    margin: 0;
+  }
+
+  @media only screen and (max-width: $bp-medium) {
+    height: 100vw;
+    grid-template-rows: 40% 60%;
+    grid-template-columns: none;
+    justify-content: center;
+    align-items: center;
+  }
 }

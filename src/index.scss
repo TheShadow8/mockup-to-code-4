@@ -1,3 +1,6 @@
+// MEDIA QUERY BREAKPOINTS
+$bp-largest: 75em; //1200px
+
 *,
 *::after,
 *::before {
@@ -9,6 +12,10 @@
 html {
   font-size: 62.5%;
   font-family: 'Montserrat', sans-serif;
+
+  @media only screen and (max-width: $bp-largest) {
+    font-size: 50%;
+  }
 }
 
 body {
