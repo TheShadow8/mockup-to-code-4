@@ -1,4 +1,5 @@
 import React from 'react';
+import PropsTypes from 'prop-types';
 
 import './Content.scss';
 import ContentLayout from '../Layout/ContentLayout';
@@ -19,3 +20,9 @@ export default function Content(props) {
     </ContentLayout>
   );
 }
+
+Content.propTypes = {
+  header: PropsTypes.string.isRequired,
+  title: PropsTypes.string.isRequired,
+  detail: PropsTypes.string.isRequired
+};

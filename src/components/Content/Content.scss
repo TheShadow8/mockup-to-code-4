@@ -16,7 +16,6 @@ $bp-small: 37.5em; //600px
   @media only screen and (max-width: $bp-medium) {
     align-items: flex-end;
 
-    // flex-basis: 4.5rem;
     p {
       transform: none;
     }
@@ -31,6 +30,7 @@ $bp-small: 37.5em; //600px
   flex-direction: column;
 
   @media only screen and (max-width: $bp-medium) {
+    height: 50%;
     width: 94%;
     justify-content: center;
     align-items: center;

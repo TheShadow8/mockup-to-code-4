@@ -1,4 +1,5 @@
 import React from 'react';
+import PropsTypes from 'prop-types';
 
 export default function Image(props) {
   return (
@@ -7,3 +8,7 @@ export default function Image(props) {
     </div>
   );
 }
+
+Image.propTypes = {
+  imgLink: PropsTypes.string.isRequired
+};

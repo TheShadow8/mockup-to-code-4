@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import classNames from 'classnames';
+import PropsTypes from 'prop-types';
 
 import './Gallery.scss';
 import GalleryLayout from '../Layout/GalleryLayout';
@@ -85,3 +86,7 @@ export default class Gallery extends Component {
     );
   }
 }
+
+Gallery.propTypes = {
+  images: PropsTypes.array.isRequired
+};

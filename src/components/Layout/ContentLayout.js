@@ -6,7 +6,7 @@ export default styled.div`
   font-size: 1.6rem;
   display: flex;
 
-  @media (max-width: 50em) {
+  @media only screen and (max-width: 50em) {
     height: auto;
     grid-column: auto;
     grid-row: 1 / 2;
